@@ -1,0 +1,108 @@
+use db_ecommerce;
+
+select * from tbl_orders;
+select * from tbl_visits;
+select *from tbl_customers;
+
+---------------- // -----------------
+
+-- Qual dia mais vendeu no mês de abril de 2021?
+
+select order_date, -- extrair da coluna ordem de data 
+    SUM(order_value) as total_vendas -- calcula a soma de um valor em uma coluna específica
+from tbl_orders -- retira os dados da tabela pedidos
+where extract(year from order_date) = 2021 -- onde o ano é 2021
+    and extract(month from order_date) = 6 -- seleciona apenas junho
+group by order_date -- agrupa as informações em order date
+order by total_vendas desc -- e poem em ordem decrescente para mostrar apenas uma informação
+limit 1; -- com o limite de uma linha apenas
+
+---------------- // -----------------
+
+-- Qual foi o produto mais caro vendido em 2021?
+
+select product_brand, -- seleciona a marca
+   max(order_value) as max_order_value -- com o maior valor na coluna max_order_value
+from tbl_orders -- da tabela pedidos
+where extract(year from order_date) = 2021 -- onde as informações serão extraidas do ano de 2021
+group by product_brand -- agrupa um produto na coluna product_brand
+order by max_order_value desc -- mostra o do maior pro menor na coluna de maior valor do pedido
+limit 1; -- faz com que o codigo mostre apenas um produto
+
+---------------- // -----------------
+
+-- Quantos clientes usaram um app no android durante uma visita?
+
+select count(distinct customer_id) AS clientes_android -- sleciona e conta de fomra distinta os ids dos clientes e poem na coluna clientes_android
+from tbl_visits -- da tabela visitas
+where dvc_version = 'Android'; -- onde a versão do dispotivo é android
+
+---------------- // -----------------
+
+-- Quais foram as marcas de smartphone compradas nos anos 2021 e 2022?
+
+select distinct product_brand from tbl_orders
+where product_department = 'SMARTPHONE'
+and (order_date >= '2021-01-01' and order_date <= '2022-12-31')
+order by product_brand asc;
+
+---------------- // -----------------
+
+-- Quantos aparelhos da marca SAMSUNG foram vendidos?
+
+select count(product_brand) as samsung_vendidos
+from tbl_orders
+where product_brand = 'SAMSUNG';
+
+---------------- // -----------------
+
+-- Quantos clientes compraram um produto do departamento automotivo no de 2021?
+
+select count(distinct customer_id) as compras_clientes
+from tbl_orders
+where product_department = 'AUTOMOTIVO';
+
+---------------- // -----------------
+
+-- Qual é a média de visitas por cliente em 2021?
+
+select avg(visitas_cliente) as media_visitas_2021
+from (
+    select customer_id, count(*) AS visitas_cliente
+    from tbl_visits
+    where extract(year from visit_date) = 2021
+    group by customer_id
+) AS consulta;
+
+---------------- // -----------------
+
+-- Quantas foram as visitas por mês no de 2022?
+
+select count(visit_id) as visitas
+from tbl_visits 
+where extract(year from visit_date) = 2022;
+
+---------------- // -----------------
+
+-- Quais foram os 100 pedidos mais baratos em 2022? (agrupe por Departamento)
+
+select product_department, order_id, MIN(order_value) AS menor_valor
+from tbl_orders
+where extract(year from order_date) = 2022
+group by product_department, order_id
+order by menor_valor
+limit 100;
+
+---------------- // -----------------
+
+-- Quantas visitas ao site realmente compraram em 2021 e 2022?
+
+select count(distinct visit_id) as visitas_compras_2021,
+       count(distinct visit_id) as visitas_compras_2022
+from tbl_visits
+where visit_id in (
+    select distinct visit_id
+    from tbl_orders
+    where extract(year from order_date) in (2021, 2022)
+);
+
