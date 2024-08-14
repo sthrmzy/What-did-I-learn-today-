@@ -8,7 +8,7 @@ What-did-I-learn-today/
 
 └── Atividades Senai Web/
 
-    └── exs_1        # Exercício de programação web - Início da etiquetagem em HTML e introdução ao CSS
+    └── exs_1        #Exercício de programação web - Início da etiquetagem em HTML e introdução ao CSS
 └── Versão 1.0 Scamboo/
 
     └── (Protótipo projeto integrador senai /bagunçado/ )
