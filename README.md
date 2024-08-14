@@ -5,13 +5,19 @@ Este repositório contém arquivos relacionados aos meus estudos diários em pro
 ## Estrutura
 
 What-did-I-learn-today/
+
 └── Atividades Senai Web/
+
     └── exs_1 (Exercício de programação web, iniciando a etiquetagem dos itens em html e apresentando um pouco do css)
 └── Versão 1.0 Scamboo/
+
     └── (Protótipo projeto integrador senai /bagunçado/ )
 └── atividade 01 senai/
+
 ├── atividade 02 senai/
+
 ├── banco de dados 01/
+
 └── freecodecamp challenge
 
 ## Como Utilizar Este Repositório
