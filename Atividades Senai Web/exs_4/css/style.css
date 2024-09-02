@@ -9,7 +9,7 @@ body{
 .header-one{ 
     position:absolute; 
     z-index:100; 
-    width: 65%; 
+    width: 60%; 
     height: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -78,8 +78,14 @@ body{
      float: left;
 }
 
+span:hover{
+    color: #868686;
+    text-decoration: none;
+    text-decoration-color: none;
+    cursor: default;
+}
+
 .header ul li a{
-    color:#fff; 
     text-transform:uppercase; 
     font-size:16px;
 }
@@ -90,9 +96,6 @@ a {
     transition: background-color 0.5s ease, color 1s;
 }
 
-a:hover {
-    color: #fff;
-}
 
 /* Images */
 img {
@@ -102,4 +105,32 @@ img {
 
 
 
+nav ul li{
+    transition: 0.5s;
+}
+
+:hover{
+    color: orange;
+    text-decoration: line-through;
+    text-decoration-color: orange;
+}
+
+nav ul li a{
+    text-decoration: none;
+    width: 100%;
+    padding: 40px 0 40px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    font-size: 23px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    overflow: hidden;
+}
+
+
+/*------------------- Trabalho -----------------------*/
+
+#trabalhos{
+    background-color: blue;
+}
 
