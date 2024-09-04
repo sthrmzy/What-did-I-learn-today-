@@ -1,130 +1,181 @@
-body {
-    padding: 0px; /* Remove o preenchimento da página */
-    margin: 0px; /* Remove as margens da página */
+body{
+    padding: 0px;
+    margin: 0px;
 }
+
 
 /* ------------------- header ------------------- */
 
-.header-one { 
-    position: absolute; /* Posiciona o header de forma absoluta na página */
-    z-index: 100; /* Coloca o header acima de outros elementos */
-    width: 60%; /* Define a largura do header como 60% da largura da tela */
-    height: 100%; /* Define a altura do header como 100% da altura da tela */
-    left: 50%; /* Posiciona o header no meio da tela */
-    transform: translateX(-50%); /* Ajusta a posição do header para centralizá-lo */
-    margin: 15px 0 0 0; /* Adiciona uma margem superior de 15 pixels */
+.header-one{ 
+    position:absolute; 
+    z-index:100; 
+    width: 60%; 
+    height: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0 0 0;
 }
 
 .header {
-    display: flex; /* Usa flexbox para alinhar itens dentro do header */
-    justify-content: space-between; /* Espalha os itens com espaço entre eles */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    background: #000; /* Define a cor de fundo como preta */
-    padding: 0 15px; /* Adiciona 15 pixels de preenchimento nas laterais */
-    height: 130px; /* Define a altura do header como 130 pixels */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 0 15px;
+    height: 130px;
 }
 
 .header .logo {
-    width: 175px; /* Define a largura do logo como 175 pixels */
+    width: 175px;
 }
 
 .header .navigation {
-    display: flex; /* Usa flexbox para alinhar itens de navegação */
-    float: right; /* Alinha a navegação à direita */
-    font-family: 'Montserrat', sans-serif; /* Define a fonte para a navegação */
-    margin: 25px 0 0 0; /* Adiciona uma margem superior de 25 pixels */
+    display: flex;
+    float:right; 
+    font-family: 'Montserrat', sans-serif; 
+    margin:25px 0 0 0;
 }
 
+
 .header .navigation ul {
-    display: flex; /* Alinha os itens da lista horizontalmente */
-    list-style-type: none; /* Remove as bolinhas dos itens da lista */
-    margin: 0; /* Remove a margem dos itens da lista */
-    padding: 0; /* Remove o preenchimento dos itens da lista */
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .header ul li {
-    float: left; /* Alinha os itens da lista à esquerda */
-    margin: 0 0 0 40px; /* Adiciona uma margem esquerda de 40 pixels */
+    float: left;
+    margin: 0 0 0 40px;
 }
 
 /* */
-.header .logo {
-    float: left; /* Alinha o logo à esquerda */
-    width: 175px; /* Define a largura do logo como 175 pixels */
+.header .logo{
+    float:left; 
+    width:175px;
 }
 
-.header .logo img { 
-    width: 100%; /* Faz a imagem ocupar 100% da largura do logo */
+.header .logo img{ 
+    width:100%;
 }
 
-.header .navigation {
-    float: right; /* Alinha a navegação à direita */
-    font-family: 'Montserrat', sans-serif; /* Define a fonte para a navegação */
-    margin: 25px 0 0 0; /* Adiciona uma margem superior de 25 pixels */
+.header .navigation{
+     float:right; 
+     font-family: 'Montserrat', sans-serif; 
+     margin:25px 0 0 0;
 }
 
-.header .navigation ul {
-    float: left; /* Alinha a lista de navegação à esquerda */
+.header .navigation ul{
+     float:left;
 }
 
 /* */
 
-.header ul li span {
-    color: #868686; /* Define a cor do texto como cinza */
-    font-size: 11px; /* Define o tamanho da fonte como 11 pixels */
-    margin: 5px 3px 0 0; /* Adiciona uma margem superior de 5 pixels e uma margem direita de 3 pixels */
-    float: left; /* Alinha o texto à esquerda */
+.header ul li span{
+     color: #868686; 
+     font-size: 11px; 
+     margin: 5px 3px 0 0; 
+     float: left;
 }
 
-span:hover {
-    color: #868686; /* Define a cor do texto como cinza ao passar o mouse */
-    text-decoration: none; /* Remove o sublinhado do texto */
-    text-decoration-color: none; /* Remove a cor do sublinhado do texto */
-    cursor: default; /* Muda o cursor para o padrão ao passar o mouse */
+span:hover{
+    color: #868686;
+    text-decoration: none;
+    text-decoration-color: none;
+    cursor: default;
 }
 
-.header ul li a {
-    text-transform: uppercase; /* Transforma o texto em maiúsculas */
-    font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+.header ul li a{
+    text-transform:uppercase; 
+    font-size:16px;
 }
 
 /* Links */
 a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    transition: background-color 0.5s ease, color 1s; /* Adiciona transições suaves para a cor e o fundo */
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 1s;
 }
+
 
 /* Images */
 img {
-    max-width: 100%; /* Faz as imagens não ultrapassarem a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%;
+    height: auto;
 }
 
-nav ul li {
-    transition: 0.5s; /* Adiciona uma transição suave para os itens da lista */
+
+
+nav ul li{
+    transition: 0.5s;
 }
 
-/* Estilo ao passar o mouse */
-:hover {
-    color: orange; /* Muda a cor do texto para laranja ao passar o mouse */
-    text-decoration: line-through; /* Adiciona uma linha através do texto */
-    text-decoration-color: orange; /* Define a cor da linha através do texto como laranja */
+:hover{
+    color: orange;
+    text-decoration: line-through;
+    text-decoration-color: orange;
 }
 
-nav ul li a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    width: 100%; /* Faz o link ocupar toda a largura do item */
-    padding: 40px 0; /* Adiciona 40 pixels de preenchimento acima e abaixo do link */
-    font-family: Arial, Helvetica, sans-serif; /* Define a fonte para os links */
-    color: aliceblue; /* Define a cor do texto como azul claro */
-    font-size: 23px; /* Define o tamanho da fonte como 23 pixels */
-    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
-    transition: color 0.3s ease; /* Adiciona uma transição suave para a cor do texto */
-    overflow: hidden; /* Oculta o conteúdo que ultrapassar o contêiner */
+nav ul li a{
+    text-decoration: none;
+    width: 100%;
+    padding: 40px 0 40px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    font-size: 23px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    overflow: hidden;
 }
 
-/*------------------- Trabalho -----------------------*/
 
-#trabalhos {
-    background-color: blue; /* Define o fundo do elemento com id "trabalhos" como azul */
+/*------------------- Background -----------------------*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#imageContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+#backgroundImage {
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transform: translateY(-50%);
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+
+/*---------------- body ------------------------ */
+
+section{
+    background-image: url(../img/divider-dark.png);
+    width: 100%;
+    height: 500px;
+    background-repeat: repeat-x;
+    margin: 0;
 }
