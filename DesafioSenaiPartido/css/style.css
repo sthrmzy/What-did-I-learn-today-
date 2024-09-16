@@ -1,3 +1,9 @@
+html {
+    scroll-behavior: smooth; 
+}
+
+
+
 body{
     padding: 0px;
     margin: 0px;
@@ -75,16 +81,35 @@ nav ul li{
     font-family: "DM Sans", sans-serif;
 }
 
-header nav ul li a{
+.header ul li {
+    position: relative; /* necessário para o ::after */
+    padding: 10px;
+}
+
+.header ul li a {
     text-decoration: none;
-    width: 100%;
-    padding: 40px 0 40px 0;
     font-family: "DM Sans", sans-serif;
     color: #FFC857;
     font-size: 23px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    position: relative; /* necessário para o ::after */
     overflow: hidden;
+}
+
+.header ul li a::after {
+    content: "";
+    display: block;
+    height: 2px; /* espessura da sublinha */
+    background: #FFC857; /* cor da sublinha */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s ease; /* animação da sublinha */
+}
+
+.header ul li a:hover::after {
+    width: 100%;
 }
 
 
@@ -175,10 +200,20 @@ header nav ul li a{
     font-size: 20px;
 }
 
+/*--------------- seção -----------------*/
 
+.quemsomos .documentos02{
+    margin-right: 300px;
+    font-family: "DM Sans", sans-serif;
+}
 
-
-
+#selecao{
+    border-color: #4B3F72;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #FFC857;
+    font-family: "DM Sans", sans-serif;
+}
 
 
 /*--------------- footer -----------------*/
