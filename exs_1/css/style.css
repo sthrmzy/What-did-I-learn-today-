@@ -1,0 +1,98 @@
+body{
+    width: 100%; /*largura do corpo */
+    height: 300px; /*altura do corpo */
+    background-color: black;
+}
+
+/* Aplica o mesmo estilo a todos os elementos especificados: header, nav, section e footer */
+header, nav, section, footer {
+    width: 100%;        /* Define a largura dos elementos como 100% do contêiner */
+    height: 80%;        /* Define a altura dos elementos como 70% do contêiner */
+    background-color: transparent; /* Define a cor de fundo como transparente inicialmente */
+    transition: border-radius 0.3s; /* Adiciona uma transição suave ao mudar o raio da borda */
+}
+
+/* Aplica bordas arredondadas somente quando o mouse está sobre os elementos */
+header:hover, nav:hover, section:hover, footer:hover { /* o atributo hover altera a aparência de um elemento quando o cursor do mouse está sobre ele */
+    border-radius: 100px; /* Cria bordas arredondadas de 100px quando em hover */
+}
+
+/* Estilos específicos para o elemento header */
+header {
+    background-color: #81749c;  /* Define a cor de fundo do header com o código hexadecimal */
+}
+
+
+/* Estilos específicos para o elemento nav */
+nav {
+    background-color: #fcfce2;  /* Define a cor de fundo do nav com o código hexadecimal */
+}
+
+/* Estilos específicos para o elemento section */
+section {
+    background-color: #4d3e6b;  /* Define a cor de fundo do section com o código hexadecimal */
+}
+
+/* Estilos específicos para o elemento footer */
+footer{
+    background-color: #8daec3;  /* Define a cor de fundo do footer com o código hexadecimal */
+}
+
+
+
+
+/* hs*/
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 5px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+}
+
+h1 {
+    color: #ff5733; /* Cor para h1 (laranja) */
+}
+
+h2 {
+    color: #33c3ff; /* Cor para h2 (azul claro) */
+}
+
+h3 {
+    color: #4caf50; /* Cor para h3 (verde) */
+}
+
+h4 {
+    color: #ffeb3b; /* Cor para h4 (amarelo) */
+}
+
+h5 {
+    color: #9c27b0; /* Cor para h5 (roxo) */
+}
+
+h6 {
+    color: #e91e63; /* Cor para h6 (rosa) */
+}
+
+/* Estilo para o cabeçalho que está sendo hoverado */
+.higher {
+    transform: scale(1.2); /* Aumenta o tamanho do cabeçalho */
+}
+
+/* Estilo para outros cabeçalhos quando um cabeçalho está sendo hoverado */
+.decrease {
+    color: #ccc; /* Altera a cor dos outros cabeçalhos para cinza claro */
+    transform: scale(0.9); /* Diminui o tamanho dos outros cabeçalhos */
+}
+
+
+
+
+nav ul li {
+    float: left;
+    list-style: none;
+    padding: 10px;
+}
