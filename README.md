@@ -7,11 +7,9 @@ Este repositório contém arquivos relacionados aos meus estudos diários em pro
 | Diretório                        | Descrição                                                        |
 |----------------------------------|------------------------------------------------------------------|
 | `Atividades-Senai-Web/`           | Exercícios de programação web. Inclui HTML e CSS.                |
-| `Versão-1.0-Scamboo/`             | Protótipo do projeto integrador Senai (estrutura inicial).       |
-| `Atividade-01-Senai/`             | Primeira atividade de programação Senai.                         |
-| `Atividade-02-Senai/`             | Segunda atividade de programação Senai.                          |
-| `Banco-de-Dados-01/`              | Arquivos relacionados a bancos de dados.                         |
-| `FreeCodeCamp-Challenge/`         | Desafios e exercícios do FreeCodeCamp.                           |
+| `DesafioSenaiPartido/`             | Desafio proposto no curso Técnico do SENAI. Ele consiste na criação de um website para partido político.       |
+| `SoloLearn/`             | Conhecimentos adquiridos durante o curso.                    |
+| `freecodecamp challenge/`             | Desafios realizados para a conclusão do curso.                       |
 
 
 ## Como Utilizar Este Repositório
